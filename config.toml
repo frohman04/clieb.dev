@@ -1,3 +1,187 @@
 baseURL = 'http://clieb.dev/'
-languageCode = 'en-us'
 title = 'clieb.dev'
+
+languageCode = 'en-us'
+defaultContentLanguage = "en"
+languageName = "English"
+hasCJKLanguage = false
+
+theme = "LoveIt"
+
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+[author]
+  name = "Chris Lieb"
+  email = ""
+  link = ""
+
+[params]
+  # public git repo utl, only when enableGitInfo is true
+  gitRepo = "https://github.com/frohman04/clieb.dev"
+
+  # which hash function used for SRI; when empty, no SRI is used
+  fingerprint = "sha512"
+
+  #dateFormat = "2022-07-30"
+
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = false
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # updatedDatePrefix = "Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # oneHeadingSize = true # default
+
+  # whether to show a page's estimated reading time
+  # readingTime = false # default
+
+  # whether to show a table of contents
+  # can be overridden in a page's front-matter
+  # Toc = false # default
+
+  # set title for the table of contents
+  # can be overridden in a page's front-matter
+  # TocTitle = "Table of Contents" # default
+
+  [params.header.title]
+    name = "clieb.dev"
+
+  [params.footer]
+    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    since = 2022
+    hugo = false
+  
+  [params.home.profile]
+    title = "clieb.dev"
+    subtitle = "A devblog"
+    social = true
+    typeit = false
+
+  [params.home.posts]
+    enable = true
+
+  [params.social]
+    GitHub = "frohman04"
+    LinkedIn = "chris-lieb"
+
+  [params.page.share]
+    enable = true
+    Twitter = true
+    Facebook = true
+    Reddit = true
+    HackerNews = true
+    Line = false
+    Weibo = false
+
+  [params.page.comment]
+    enable = false
+
+  [params.cookieconsent]
+    enable = false
+
+  [params.cdn]
+    data = "cdnjs.yml"
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
+
+[Permalinks]
+  posts = ":year/:month/:filename"
+
+# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "clieb.dev"
+    subtitle = "A devblog"
+    owner = "Chris Lieb"
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+
+    [languages.en.params.logo]
+      logoText = "clieb.dev"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        weight = 1
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+      [[languages.en.menu.main]]
+        weight = 2
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        weight = 3
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+        url = "https://github.com/frohman04/"
+        title = "GitHub"
+      [[languages.en.menu.main]]
+        weight = 3
+        identifier = "linkedin"
+        pre = "<i class='fab fa-linkedin fa-fw' aria-hidden='true'></i>"
+        url = "https://www.linkedin.com/in/chris-lieb/"
+        title = "LinkedIn"
