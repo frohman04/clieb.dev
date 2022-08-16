@@ -163,16 +163,11 @@ enableEmoji = true
       logoHomeLink = "/"
 
     [languages.en.menu]
-      [[languages.en.menu.main]]
-        weight = 1
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-      [[languages.en.menu.main]]
-        weight = 2
-        identifier = "about"
-        name = "About"
-        url = "/about"
+      # [[languages.en.menu.main]]
+      #   weight = 1
+      #   identifier = "posts"
+      #   name = "Posts"
+      #   url = "/posts/"
       [[languages.en.menu.main]]
         weight = 3
         identifier = "github"
