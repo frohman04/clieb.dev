@@ -2,6 +2,9 @@
 title: "Bootstrap"
 date: 2022-07-31T19:25:51-04:00
 draft: false
+
+toc:
+  enable: false
 ---
 
 Well, it's certainly been a while since I last blogged.  Hopefully I've done a good enough job of
