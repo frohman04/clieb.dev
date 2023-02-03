@@ -61,9 +61,10 @@ enableEmoji = true
     name = "clieb.dev"
 
   [params.footer]
-    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
     since = 2022
     hugo = false
+    custom = '<a href="https://hachyderm.io/@frohman" rel="me" display="none"></a>'
   
   [params.home.profile]
     title = "clieb.dev"
@@ -80,7 +81,7 @@ enableEmoji = true
 
   [params.page.share]
     enable = true
-    Twitter = true
+    Twitter = false
     Facebook = true
     Reddit = true
     HackerNews = true
@@ -180,3 +181,10 @@ enableEmoji = true
         pre = "<i class='fab fa-linkedin fa-fw' aria-hidden='true'></i>"
         url = "https://www.linkedin.com/in/chris-lieb/"
         title = "LinkedIn"
+      [[languages.en.menu.main]]
+        weight = 3
+        identifier = "mastodon"
+        pre = "<i class='fab fa-mastodon fa-fw' aria-hidden='true'></i>"
+        url = "https://hachyderm.io/@frohman"
+        title = "Mastodon"
+        rel = "me"
